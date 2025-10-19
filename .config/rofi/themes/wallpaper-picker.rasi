@@ -1,0 +1,109 @@
+/* grid-wallpaper-picker.rasi */
+/* Rofi Wallpaper Picker Theme */
+
+configuration {
+    show-icons: true;
+    drun-display-format: "{name}";
+    font: "FiraCode Nerd Font 12";
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 1200px;
+    border: 2px;
+    border-color: #44475a;
+    border-radius: 20px;
+    background-color: #282a36;
+}
+
+mainbox {
+    spacing: 10px;
+    padding: 20px;
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing: 10px;
+    margin: 0px 0px 10px 0px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #23232e;
+    text-color: #f8f8f2;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    str: "🎞️";
+    text-color: #bd93f9;
+    expand: false;
+    padding: 0px 6px 0px 0px;
+    background-color: inherit;
+}
+entry {
+    placeholder: "Search or pick wallpaper";
+    placeholder-color: #6272a4;
+    padding: 3px 0px;
+    background-color: inherit;
+    text-color: #f8f8f2;
+}
+
+listview {
+    columns: 4;           
+    lines: 2;
+    flow: horizontal;
+    spacing: 20px;
+    padding: 10px;
+    cycle: true;
+    fixed-width: true;
+    fixed-height: true;
+    dynamic: true;
+    layout: vertical;
+    background-color: transparent;
+}
+
+element {
+    orientation: vertical;
+    spacing: 5px;
+    padding: 6px;
+    border-radius: 12px;
+    background-color: transparent;
+    text-color: #f8f8f2;
+}
+
+element.selected {
+    background-color: #44475a;
+    border-radius: 12px;
+    text-color: #bd93f9;
+}
+
+element-icon {
+    size: 100px;             
+    padding: 0px;
+    margin: 2px;
+    background-color: transparent;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+    text-color: #d6d6d6;
+    font-size: 15px;
+    max-width: 180px;
+    min-width: 70px;
+    outline: none;
+    background-color: transparent;
+    highlight: #d6d6d6;
+    wrap: false;
+    // ellipsize: end;
+}
+
+scrollbar {
+    handle-width: 5px;
+    handle-color: #bd93f9;
+    border-radius: 10px;
+    background-color: #44475a;
+}

@@ -1,0 +1,64 @@
+[config.wallpaper]
+# ...
+set = true
+
+command = "swww"
+
+arguments = ["img", "--transition-type", "center"]
+
+[templates.hyprland]
+input_path = '/home/chirayug/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+# [templates.hyprland]
+# input_path = ''
+# output_path = '~/.config/hypr/colors.conf'
+
+[templates.waybar]
+input_path = '/home/chirayug/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '/home/chirayug/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.gtk3]
+input_path = '/home/chirayug/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '/home/chirayug/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.wlogout]
+input_path = '/home/chirayug/.config/matugen/templates/colors.css'
+output_path = '~/.config/wlogout/colors.css'
+
+[templates.rofi]
+input_path = '/home/chirayug/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.qt5ct]
+input_path = '/home/chirayug/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+[templates.alacritty]
+input_path = '/home/chirayug/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/alacritty/colors.toml'
+
+# [templates.starship]
+# input_path = ''
+# output_path = '~/.config/starship.toml'
+
+[templates.btop]
+input_path = '/home/chirayug/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+[templates.swaync]
+input_path = '/home/chirayug/.config/matugen/templates/colors.css'
+output_path = '~/.config/swaync/colors.css'
+post_hook = 'killall -USR1 swaync'
