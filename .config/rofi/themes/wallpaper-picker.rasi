@@ -1,5 +1,6 @@
 /* grid-wallpaper-picker.rasi */
 /* Rofi Wallpaper Picker Theme */
+@import "~/.config/rofi/colors.rasi"
 
 configuration {
     show-icons: true;
@@ -13,9 +14,9 @@ window {
     fullscreen: false;
     width: 1200px;
     border: 2px;
-    border-color: #44475a;
+    border-color: @selected;
     border-radius: 20px;
-    background-color: #282a36;
+    background-color: @background;
 }
 
 mainbox {
@@ -30,23 +31,24 @@ inputbar {
     margin: 0px 0px 10px 0px;
     padding: 5px 10px;
     border-radius: 10px;
-    background-color: #23232e;
-    text-color: #f8f8f2;
+    background-color: transparent;
+    text-color: @selected;
+    // text-color: #f8f8f2;
     children: [ "textbox-prompt-colon", "entry" ];
 }
 textbox-prompt-colon {
     str: "🎞️";
-    text-color: #bd93f9;
+    text-color: @foreground;
     expand: false;
     padding: 0px 6px 0px 0px;
     background-color: inherit;
 }
 entry {
     placeholder: "Search or pick wallpaper";
-    placeholder-color: #6272a4;
+    placeholder-color: @selected;
     padding: 3px 0px;
     background-color: inherit;
-    text-color: #f8f8f2;
+    text-color: inherit;
 }
 
 listview {
@@ -69,13 +71,13 @@ element {
     padding: 6px;
     border-radius: 12px;
     background-color: transparent;
-    text-color: #f8f8f2;
+    text-color: @foreground;
 }
 
 element.selected {
-    background-color: #44475a;
+    background-color: @selected;
     border-radius: 12px;
-    text-color: #bd93f9;
+    text-color: inherit;
 }
 
 element-icon {
@@ -85,25 +87,31 @@ element-icon {
     background-color: transparent;
 }
 
+element selected.normal {
+    background-color:            @active;
+    text-color:                  @background;
+}
+
+
 element-text {
     vertical-align: 0.5;
     horizontal-align: 0.5;
     padding: 10px 0px 0px 0px;
     margin: 0px;
-    text-color: #d6d6d6;
+    text-color: inherit;
     font-size: 15px;
     max-width: 180px;
     min-width: 70px;
     outline: none;
     background-color: transparent;
-    highlight: #d6d6d6;
+    highlight: @selected;
     wrap: false;
     // ellipsize: end;
 }
 
 scrollbar {
     handle-width: 5px;
-    handle-color: #bd93f9;
+    handle-color: @selected;
     border-radius: 10px;
-    background-color: #44475a;
+    background-color: @background-altw;
 }
