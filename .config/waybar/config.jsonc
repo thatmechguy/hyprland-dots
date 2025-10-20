@@ -26,8 +26,8 @@
     "memory",
     "cpu",
     "temperature",
-    "backlight",
-    "pulseaudio",
+  //  "backlight",
+  //  "pulseaudio",
     "battery",
     "custom/power"
   ],
@@ -62,7 +62,7 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛 {usage}%",
-    "on-click": "kitty -e btop"
+    "on-click": "$TERMINAL -e btop"
   },
   "clock": {
 	"interval": 1,
@@ -87,7 +87,8 @@
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
-    "format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+  //  "format-wifi": "{icon} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "format-wifi": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "format-ethernet": "󰀂",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)",

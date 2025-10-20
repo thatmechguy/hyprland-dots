@@ -206,17 +206,17 @@
     margin: 5px;
     border-radius: 10px;
     font-size: 0.5rem;
-    color: @primary;
+    color: @on_surface;
 }
 
 .widget-dnd>switch {
     border-radius: 10px;
     border: 1px solid #7aa2f7;
-    background: @primary;
+    background: @on_surface;
 }
 
 .widget-dnd>switch:checked {
-    background: #f7768e;
+    background: @primary;
     border: 1px solid #f7768e;
 }
 
@@ -241,7 +241,7 @@
 
 .widget-mpris {
     color: @on_surface;
-    background: @surface;
+    background: @primary;
     padding: 3px 6px;
     margin: 5px;
     border-radius: 10px;
@@ -283,8 +283,8 @@
 
 /* individual buttons */
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-    background: @on_surface;
-    color: @surface-container
+    background: @primary;
+    color: @surface
 }
 
 .widget-menubar>box>.menu-button-bar>button {
