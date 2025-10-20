@@ -94,8 +94,8 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "spacing": 1
+    // "on-click": "nm-applet"
   },
   "battery": {
     "format": "{capacity}% {icon}",
