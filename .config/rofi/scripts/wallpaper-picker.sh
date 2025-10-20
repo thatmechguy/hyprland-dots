@@ -18,5 +18,5 @@ if [[ -n "$chosen" ]]; then
   # First, run matugen to generate color and theme configs for the selected wallpaper
   matugen image "$WALLPAPER"
   # Set wallpaper with swww (Hyprland Wayland utility, or use your own wallpaper setter)
-  swww img "$WALLPAPER"
+  # swww img "$WALLPAPER"
 fi

@@ -2,6 +2,7 @@
 /* Main Config (wallpaper) */
 
 @import "~/.config/rofi/config.rasi"  
+@import "~/.config/rofi/colors.rasi"  
 
 /* ---- Configuration ---- */ 
 configuration {
@@ -11,12 +12,15 @@ configuration {
 window {
   width: 75%;
   height: inherit;
+  background-color: @background;
+  border-color: @foreground;
 }
 
 /* ---- Mainbox ---- */
 mainbox {
   children:
     [ "inputbar", "listview"];
+  background-color: @background;
 }
 
 entry {
@@ -51,7 +55,7 @@ element {
 }
 
 element selected.normal {
-  background-color: transparent;
+  background-color: @selected;
 }
 
 element-icon {
