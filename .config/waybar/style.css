@@ -13,13 +13,14 @@
 window#waybar {
   background-color: @background;
   border-radius: 8px;
-  border: 1px solid @on_surface;
+  border: 1px solid @primary;
 }
 
 .modules-left {
   margin-left: 0px;
   /* background-color: @on_surface; */
   padding: 3px;
+  padding-left: 0px;
   border-radius: 5px;
 }
 
@@ -27,36 +28,42 @@ window#waybar {
   margin-right: 0px;
   /* background-color: @on_surface; */
   padding: 3px;
+  padding-right: 0px;
   border-radius: 5px;
 }
 
+#workspaces {
+  background-color: @inverse_primary;
+  border-radius: 5px;
+  }
+
 .modules-center {
-  /* background-color: @on_surface;
-  color: @background; */
+ /*  background-color: @inverse_primary; */
+  color: @background;
   padding: 3px;
-  border-radius: 17px;
+  border-radius: 5px;
 }
 
 #workspaces button {
   transition: all 0.4s ease;
-  background-color: @background;
+  /*background-color: @inverse_primary;*/
   color: @on_surface;
   /* border: 1px solid @on_surface; */
   min-width: 9px;
-  border-radius: 17px;
+  border-radius: 5px;
   margin-left: 2px;
   margin-right: 2px;
 }
 
 #workspaces button.active {
-  background-color: @primary;
+  background-color: @on_background;
   color: @surface;
   min-width: 40px;
-  border-radius: 17px;
+  border-radius: 5px;
 }
 
 #workspaces button:hover {
-  border-radius: 17px;
+  border-radius: 5px;
   background-color: @on_surface;
   color: @surface;
 }
@@ -68,13 +75,14 @@ window#waybar {
 #taskbar {
   min-width: 12px;
   margin: 0 2px;
+  background-color: @inverse_primary;
 }
 
 
 #taskbar button{
   transition: all 0.3s ease;
   /* background-color: @on_surface; */
-  border-radius: 17px;
+  border-radius: 5px;
   margin-left: 2px;
   margin-right: 2px;
   /* border: 1px solid @on_surface; */
@@ -82,8 +90,8 @@ window#waybar {
 }
 
 #taskbar button.active {
-  background-color: @primary;
-  border-radius: 17px;
+  background-color: @on_background;
+  border-radius: 5px;
   min-width: 25px;
   padding-left: 18px;
 }
@@ -113,7 +121,7 @@ window#waybar {
 #power-profiles-daemon,
 #custom-update,
 #custom-power {
-  /* background-color: @background; */
+  background-color: @inverse_primary;
   color: @on_surface;
   min-width: 12px;
   margin: 0 2px;
@@ -129,7 +137,7 @@ window#waybar {
 
 tooltip {
   padding: 2px;
-  background-color: @background;
+  background-color: @inverse_primary;
   /* color: @on_surface; */
   border-radius: 5px;
   border: solid 1px @on_surface;
@@ -178,5 +186,6 @@ tooltip {
 
 #custom-menu {
   font-size: 16;
-  color: @primary;
+  color: @on_surface;
+  padding-right: 13px;
 }
