@@ -1,0 +1,3 @@
+sudo pacman -S hyprland sddm udiskie waybar xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nwg-look zsh zsh-autosuggestions zsh-syntax-highlighting eog gedit firefox nautilus hyprlock hypridle swww obsidian brightnessctl wlogout swaync network-manager-applet chromium obs-studio vlc vscodium rofi kitty gnome-boxes shotcut
+
+paru -S matugen
